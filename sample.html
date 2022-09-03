@@ -2,6 +2,12 @@
 <html>
 <head>
 <title>Vendomatic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
 <style>
 h1 {
 	background-color: powderblue;
@@ -10,12 +16,15 @@ h1 {
 	border: 2px solid powderblue;
 	float: center;
 	text-align: center;
-}</style>
-<h1 style="font-family:'fantasy', cursive;"><i><em><b><strong>VENDOMATICINDIA</strong></b></em></i></h1>
+}
+	.classh1{
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
+</style>
+<h1 class="classh1" style="font-family:'fantasy', cursive;"><i><em><b><strong>VENDOMATICINDIA</strong></b></em></i></h1>
 <hr>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <style>
 	.email {
 		text-decoration: none;
@@ -23,24 +32,26 @@ h1 {
 	}
 	.icon {
 		color: gray;
+		font-size: 16px;
 	}
 
 	.text {
   color: gray;
+  font-size: 16px;
 }
-	.btn {
+	.btn0 {
   background-color: #f4511e;
   border: none;
   color: white;
   padding: 12px 28px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   margin: 4px 2px;
   opacity: 1;
   transition: 0.3s;
   cursor: pointer;
 }
-.btn:hover {opacity: 0: 6}
+.btn0:hover {opacity: 0: 6}
 li {
 	display:  inline;
 }
@@ -51,9 +62,9 @@ li {
 </head>
 <p style="text-align:left;">
 	<div>
-		<a href='https://www.vendomaticindia.com/'><button class="btn">Home</button></a>
-	    <a href='https://www.vendomaticindia.com/about/'><button class="btn">About</button></a>
-	    <a href='https://www.vendomaticindia.com/contact/'><button class="btn">Contact</button></a>
+		<a href='https://www.vendomaticindia.com/'><button class="btn0">Home</button></a>
+	    <a href='https://www.vendomaticindia.com/about/'><button class="btn0">About</button></a>
+	    <a href='https://www.vendomaticindia.com/contact/'><button class="btn0">Contact</button></a>
 	    <a href="mailto:info@vendomaticindia.com" class="email"><i style="font-size:20px" class="fa icon">&#xf0e0;</i><i class="text">info@vendomaticindia.com </i></a>
         <a href="mailto:salesmaticindia.com" class="email"><i style="font-size:20px" class="fa icon">&#xf0e0;</i><i class="text">sales@vendomaticindia.com </i></a>
 	<span style="float:right;">
@@ -62,18 +73,19 @@ li {
         target="_blank"
 
         rel="noopener noreferrer"
-      ><button class="btn btn1">Get In Touch</button></a></div>
+      ><button class="btn0 btn1">Get In Touch</button></a></div>
       <hr>
 		</p>
 <div><span style="margin-left"> <a><img src="vic.jpg" style="max-width:100%; height:auto;"></span></div>
+
 <span 
 style="float:right;">
-<center>
+
 <style>
 .fa {
   padding: 15px;
   font-size: 20px;
-  width: 30px;
+  width: 50px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
@@ -113,7 +125,96 @@ style="float:right;">
 <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEy0tb9szOc8QAAAYLe5JqgdXoxNYNVA6j6UejgAivlMDIa9KBRgt7yEPNZhHzZquYxel7nXcdmGG8O_qsuRxlriIpNR3GBl7zpTkqR71bLaq043CTlJ8ojX-FEqFb7_vy6fBA=&original_referer=https://www.vendomaticindia.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Fvendomatic-india" class="fa fa-linkedin"></a>
 <a href="https://www.youtube.com/watch?v=iibMiBrso7U" class="fa fa-youtube"></a>
 <a href="https://www.instagram.com/vendomaticindia/" class="fa fa-instagram"></a>
-</center>
+</body>
+<style>
+* {box-sizing: border-box;}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<button class="open-button" onclick="openForm()">Ask Me</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
 <style>
 body
 h1   {color: red;}
